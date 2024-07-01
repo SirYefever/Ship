@@ -1,0 +1,15 @@
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\Ship.exe.config
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\Ship.exe
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\Ship.pdb
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.AssemblyReference.cache
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\MainWindow.g.cs
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\App.g.cs
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship_MarkupCompile.cache
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship_MarkupCompile.lref
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\MainWindow.baml
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.g.resources
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.Properties.Resources.resources
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.GenerateResource.cache
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.CoreCompileInputs.cache
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.exe
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.pdb
