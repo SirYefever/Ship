@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\ship\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,36 +38,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\Room.cs",
+              "RelativeDocumentMoniker": "Ship\\Room.cs",
+              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\Room.cs",
+              "RelativeToolTip": "Ship\\Room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T06:55:26.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CrewMember.cs",
+              "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\CrewMember.cs",
+              "RelativeDocumentMoniker": "Ship\\CrewMember.cs",
+              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\CrewMember.cs",
+              "RelativeToolTip": "Ship\\CrewMember.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T06:49:21.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainModel.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainModel.cs",
               "RelativeDocumentMoniker": "Ship\\MainModel.cs",
               "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainModel.cs",
               "RelativeToolTip": "Ship\\MainModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T05:29:49.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Ship\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainWindow.xaml*",
-              "RelativeToolTip": "Ship\\MainWindow.xaml*",
+              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainWindow.xaml",
+              "RelativeToolTip": "Ship\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-06-30T15:41:06.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Ship\\MainWindow.xaml.cs",
@@ -71,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\App.xaml.cs",
               "RelativeDocumentMoniker": "Ship\\App.xaml.cs",
@@ -83,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\App.xaml",
               "RelativeDocumentMoniker": "Ship\\App.xaml",
