@@ -7,10 +7,11 @@ namespace Ship
     {
         private ObservableCollection<CrewMember> _crew;
         private Random _rnd = new Random();
+        
 
         public ObservableCollection<CrewMember> Crew { get => _crew; }
         public MainModel MainControl { get; set; }
-
+        
 
         public void CrewHungersRandomly()
         {
@@ -66,14 +67,25 @@ namespace Ship
                     {
                         crewMember.Move(MainControl.RoomControl.Rooms[rand]);
 
-                        //get busy until extinguished
+                        //Get busy until extinguished
                         crewMember.BusyUntil = int.MaxValue;
                     }
                 }
+                //Exempt crewMember from extinguishing if job is done
                 if (crewMember.IsBusy && !crewMember.CurrentRoom.IsBurning)
-                {
                     crewMember.BusyUntil = 0;
-                }
+                
+            }
+        }
+
+        public void ManageBusiness()
+        {
+            foreach (var crewMember in Crew)
+            {
+                if (crewMember.BusyUntil <= MainControl.TicksTotal)
+                    crewMember.IsBusy = true;
+                else
+                    crewMember.IsBusy = false;
             }
         }
     }

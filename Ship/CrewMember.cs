@@ -17,10 +17,11 @@ namespace Ship
         private string _name;
         private string _sex;
         private bool _isHngry;
-        private bool _isBusy = false;
         private Random _rnd = new Random();
-        public Room CurrentRoom { get; set; }
 
+
+
+        public Room CurrentRoom { get; set; }
         public string Name
         {
             get => _name; set
@@ -49,14 +50,7 @@ namespace Ship
             }
         }
 
-        public bool IsBusy
-        {
-            get => _isBusy; set
-            {
-                _isHngry = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsBusy)));
-            }
-        }
+        public bool IsBusy { get; set; }
 
         public void Move(Room room)
         {
@@ -78,7 +72,5 @@ namespace Ship
         {
             _isHngry = false;
         }
-
-
     }
 }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ship
 {
@@ -62,6 +58,18 @@ namespace Ship
                             }
                         }
                     }
+                }
+            }
+        }
+        public void ManageExtinguishing()
+        {
+            foreach(var room in Rooms)
+            {
+                if (room.IsBurning)
+                {
+                    double extinguishPossibility = 1 - (100 / room.Crewers.Count);
+                    if (_rnd.NextDouble() < extinguishPossibility)
+                        room.IsBurning = false;
                 }
             }
         }

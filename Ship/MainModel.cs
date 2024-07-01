@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace Ship
@@ -16,9 +11,9 @@ namespace Ship
 
         };
 
-        private const int _secondsInTick = 3;
         private bool _isPaused = false;
-        
+        private const int _secondsInTick = 3;
+
         public CrewController CrewControl { get; set; }
         public RoomManager RoomControl {  get; set; }
         public int TicksTotal { get; private set; } = 0;
@@ -36,7 +31,7 @@ namespace Ship
             CrewControl.SpreadCrewOverShip();
         }
 
-        void timerTick(object sender, EventArgs e)
+        public void timerTick(object sender, EventArgs e)
         {
 
             if (_isPaused)
@@ -49,11 +44,12 @@ namespace Ship
 
             CrewControl.CrewVisitsKambuzIfNeeded();
             CrewControl.CrewStraysRandomly();
+            CrewControl.ManageExtinguishing();
+            CrewControl.ManageBusiness();
+
+            RoomControl.ManageBurning();
+            RoomControl.ManageExtinguishing();
 
         }
-
-        
-
     }
-
 }
