@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\ship\\crewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\crewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\ship\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\ship\\crewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\crewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\roommanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\ship\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\shipparts\\slaveroomclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\shipparts\\slaveroomclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\shipparts\\chestclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\shipparts\\chestclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\shipparts\\shipclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\shipparts\\treasureroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\shipparts\\treasureroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\shipparts\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\shipparts\\chest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\shipparts\\slaveroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\shipparts\\slaveroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|c:\\users\\ninja\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\ship\\ship\\shipparts\\shippart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\shipparts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\ship\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\crewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\ship\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D3853EB0-9D92-45D8-B435-0F0B67DA2F9C}|Ship\\Ship.csproj|solutionrelative:ship\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -94,37 +94,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SlaveRoom.cs",
-              "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\SlaveRoom.cs",
-              "RelativeDocumentMoniker": "Ship\\ShipParts\\SlaveRoom.cs",
-              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\SlaveRoom.cs",
-              "RelativeToolTip": "Ship\\ShipParts\\SlaveRoom.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
+              "DocumentIndex": 4,
+              "Title": "SlaveRoomClass.cs",
+              "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\SlaveRoomClass.cs",
+              "RelativeDocumentMoniker": "Ship\\ShipParts\\SlaveRoomClass.cs",
+              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\SlaveRoomClass.cs",
+              "RelativeToolTip": "Ship\\ShipParts\\SlaveRoomClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T08:07:39.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Chest.cs",
-              "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Chest.cs",
-              "RelativeDocumentMoniker": "Ship\\ShipParts\\Chest.cs",
-              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Chest.cs",
-              "RelativeToolTip": "Ship\\ShipParts\\Chest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "DocumentIndex": 5,
+              "Title": "ChestClass.cs",
+              "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\ChestClass.cs",
+              "RelativeDocumentMoniker": "Ship\\ShipParts\\ChestClass.cs",
+              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\ChestClass.cs",
+              "RelativeToolTip": "Ship\\ShipParts\\ChestClass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T08:07:30.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "BountyRoom.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\BountyRoom.cs",
               "RelativeDocumentMoniker": "Ship\\BountyRoom.cs",
@@ -137,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Stock.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Stock.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\Stock.cs",
@@ -150,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "TreasureRoom.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\TreasureRoom.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\TreasureRoom.cs",
@@ -163,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Storage.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Storage.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\Storage.cs",
@@ -176,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Galley.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Galley.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\Galley.cs",
@@ -189,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CrowsNest.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\CrowsNest.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\CrowsNest.cs",
@@ -202,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Mast.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Mast.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\Mast.cs",
@@ -215,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Cabin.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Cabin.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\Cabin.cs",
@@ -228,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Deck.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\Deck.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\Deck.cs",
@@ -241,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "ShipClass.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\ShipClass.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\ShipClass.cs",
@@ -254,33 +254,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RoomManager.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\RoomManager.cs",
               "RelativeDocumentMoniker": "Ship\\RoomManager.cs",
               "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\RoomManager.cs",
               "RelativeToolTip": "Ship\\RoomManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T09:29:18.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CrewController.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\CrewController.cs",
               "RelativeDocumentMoniker": "Ship\\CrewController.cs",
               "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\CrewController.cs",
               "RelativeToolTip": "Ship\\CrewController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T09:20:31.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ShipPart.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\ShipParts\\ShipPart.cs",
               "RelativeDocumentMoniker": "Ship\\ShipParts\\ShipPart.cs",
@@ -293,13 +293,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 3,
               "Title": "CrewMember.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\CrewMember.cs",
               "RelativeDocumentMoniker": "Ship\\CrewMember.cs",
               "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\CrewMember.cs",
               "RelativeToolTip": "Ship\\CrewMember.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAcwEkAAAAJAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAnwDYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T06:49:21.482Z",
               "EditorCaption": ""
@@ -310,9 +310,9 @@
               "Title": "MainModel.cs",
               "DocumentMoniker": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainModel.cs",
               "RelativeDocumentMoniker": "Ship\\MainModel.cs",
-              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainModel.cs*",
-              "RelativeToolTip": "Ship\\MainModel.cs*",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBMAAAAaAAAA",
+              "ToolTip": "C:\\Users\\ninja\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Ship\\Ship\\MainModel.cs",
+              "RelativeToolTip": "Ship\\MainModel.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwDIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T05:29:49.296Z",
               "EditorCaption": ""

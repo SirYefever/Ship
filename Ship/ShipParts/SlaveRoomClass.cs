@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ship.ShipParts
 {
-    public class Chest : BountyRoom
+    public class SlaveRoomClass : BountyRoom
     {
+
     }
 }

@@ -25,15 +25,15 @@ namespace Ship
             }
         }
 
-        //public void CrewVisitsKambuzIfNeeded()
-        //{
-        //    foreach (var crewMember in _crew)
-        //        if (crewMember.IsHungry && !crewMember.IsBusy)
-        //        {
-        //            crewMember.Move(MainControl.RoomControl.GetRoom("Камбуз"));
-        //            crewMember.BusyUntil = MainControl.TicksTotal + 1;
-        //        }
-        //}
+        public void CrewVisitsKambuzIfNeeded()
+        {
+            foreach (var crewMember in _crew)
+                if (crewMember.IsHungry && !crewMember.IsBusy)
+                {
+                    crewMember.Move(MainControl.RoomControl.GetRoom("Galley"));
+                    crewMember.BusyUntil = MainControl.TicksTotal + 1;
+                }
+        }
 
         public void SpreadCrewOverShip()
         {

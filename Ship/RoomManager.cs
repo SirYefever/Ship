@@ -9,38 +9,43 @@ namespace Ship
         private ObservableCollection<ShipPart> _rooms;
         private Random _rnd;
 
+        public ShipClass Ship { get; set; }
+        public ChestClass Chest { get; set; }
+        public SlaveRoomClass SlaveRoom { get; set; }
         public ObservableCollection<ShipPart> Rooms { get => _rooms; }
         public int RoomsQuantity { get => _rooms.Count; }
-        public ShipPart GetRoom(string name)
+        public ShipPart GetRoom(string roomType)
         {
             foreach (var room in _rooms)
             {
-                if (room.Name == name)
+                if (room.GetType().ToString() == roomType)
                     return room;
             }
-            Console.WriteLine("Room " + name + " not found.");
+            Console.WriteLine("Room " + roomType + " not found.");
             return null;
+        }
+
+        public RoomManager()
+        {
+            Ship = new ShipClass(5);
+            Chest = new ChestClass();
+            SlaveRoom = new SlaveRoomClass();
+            Ship.deck.treasureRoom.chest = Chest;
+            Ship.deck.treasureRoom.slaveRoom = SlaveRoom;
         }
 
         public void InitializeRooms()
         {
-            Rooms.Add(new ShipPart("Каюта"));
-            Rooms.Add(new ShipPart("Палуба"));
-            Rooms.Add(new ShipPart("Мачта"));
-            Rooms.Add(new ShipPart("Камбуз"));
-            Rooms.Add(new ShipPart("Воронье Гнездо"));
-            Rooms.Add(new ShipPart("Сокровищница"));
-            Rooms.Add(new ShipPart("Склад"));
         }
 
         public void ManageBurning()
         {
-            if (!GetRoom("Камбуз").IsBurning)
+            if (!GetRoom(nameof(Galley)).IsBurning)
             {
                 double rand = _rnd.NextDouble();
                 if (rand <= 0.3)
                 {
-                    GetRoom("Камбуз").IsBurning = true;
+                    GetRoom(nameof(Galley)).IsBurning = true;
                 }
             }
             foreach (var room in Rooms)

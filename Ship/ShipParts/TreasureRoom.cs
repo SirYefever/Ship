@@ -8,8 +8,8 @@ namespace Ship.ShipParts
 {
     public class TreasureRoom : Storage
     {
-        public Chest chest {  get; set; }
-        public SlaveRoom slaveRoom { get; set; }
+        public ChestClass chest {  get; set; }
+        public SlaveRoomClass slaveRoom { get; set; }
 
     }
 }
