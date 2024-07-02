@@ -55,9 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BountyRoom.cs" />
     <Compile Include="CrewController.cs" />
-    <Compile Include="Room.cs" />
+    <Compile Include="ShipParts\Cabin.cs" />
+    <Compile Include="ShipParts\Chest.cs" />
+    <Compile Include="ShipParts\CrowsNest.cs" />
+    <Compile Include="ShipParts\Deck.cs" />
+    <Compile Include="ShipParts\Galley.cs" />
+    <Compile Include="ShipParts\Mast.cs" />
+    <Compile Include="ShipParts\ShipClass.cs" />
+    <Compile Include="ShipParts\ShipPart.cs" />
     <Compile Include="RoomManager.cs" />
+    <Compile Include="ShipParts\SlaveRoom.cs" />
+    <Compile Include="ShipParts\Stock.cs" />
+    <Compile Include="ShipParts\TreasureRoom.cs" />
+    <Compile Include="ShipParts\Storage.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

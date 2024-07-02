@@ -21,7 +21,7 @@ namespace Ship
 
 
 
-        public Room CurrentRoom { get; set; }
+        public ShipPart CurrentRoom { get; set; }
         public string Name
         {
             get => _name; set
@@ -52,7 +52,7 @@ namespace Ship
 
         public bool IsBusy { get; set; }
 
-        public void Move(Room room)
+        public void Move(ShipPart room)
         {
             CurrentRoom.Crewers.Remove(this);
             room.Crewers.Add(this);

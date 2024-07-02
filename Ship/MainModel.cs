@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ship.ShipParts;
+using System;
 using System.ComponentModel;
 using System.Windows.Threading;
 
@@ -14,8 +15,9 @@ namespace Ship
         private bool _isPaused = false;
         private const int _secondsInTick = 3;
 
+        public ShipClass Ship {  get; set; }
         public CrewController CrewControl { get; set; }
-        public RoomManager RoomControl {  get; set; }
+        //public RoomManager RoomControl {  get; set; }
         public int TicksTotal { get; private set; } = 0;
 
         public MainModel()
@@ -25,9 +27,10 @@ namespace Ship
             timer.Tick += timerTick;
             timer.Start();
 
+            Ship = new ShipClass(5);
             CrewControl = new CrewController();
             RoomControl = new RoomManager();
-            RoomControl.InitializeRooms();
+            //RoomControl.InitializeRooms();
             CrewControl.SpreadCrewOverShip();
         }
 
@@ -42,13 +45,13 @@ namespace Ship
             if (TicksTotal % 5 == 0)
                 CrewControl.CrewHungersRandomly();
 
-            CrewControl.CrewVisitsKambuzIfNeeded();
+            //CrewControl.CrewVisitsKambuzIfNeeded();
             CrewControl.CrewStraysRandomly();
             CrewControl.ManageExtinguishing();
             CrewControl.ManageBusiness();
 
-            RoomControl.ManageBurning();
-            RoomControl.ManageExtinguishing();
+            //RoomControl.ManageBurning();
+            //RoomControl.ManageExtinguishing();
 
         }
     }

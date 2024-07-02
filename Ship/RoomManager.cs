@@ -1,16 +1,17 @@
-﻿using System;
+﻿using Ship.ShipParts;
+using System;
 using System.Collections.ObjectModel;
 
 namespace Ship
 {
     public class RoomManager
     {
-        private ObservableCollection<Room> _rooms;
+        private ObservableCollection<ShipPart> _rooms;
         private Random _rnd;
 
-        public ObservableCollection<Room> Rooms { get => _rooms; }
+        public ObservableCollection<ShipPart> Rooms { get => _rooms; }
         public int RoomsQuantity { get => _rooms.Count; }
-        public Room GetRoom(string name)
+        public ShipPart GetRoom(string name)
         {
             foreach (var room in _rooms)
             {
@@ -23,13 +24,13 @@ namespace Ship
 
         public void InitializeRooms()
         {
-            Rooms.Add(new Room("Каюта"));
-            Rooms.Add(new Room("Палуба"));
-            Rooms.Add(new Room("Мачта"));
-            Rooms.Add(new Room("Камбуз"));
-            Rooms.Add(new Room("Воронье Гнездо"));
-            Rooms.Add(new Room("Сокровищница"));
-            Rooms.Add(new Room("Склад"));
+            Rooms.Add(new ShipPart("Каюта"));
+            Rooms.Add(new ShipPart("Палуба"));
+            Rooms.Add(new ShipPart("Мачта"));
+            Rooms.Add(new ShipPart("Камбуз"));
+            Rooms.Add(new ShipPart("Воронье Гнездо"));
+            Rooms.Add(new ShipPart("Сокровищница"));
+            Rooms.Add(new ShipPart("Склад"));
         }
 
         public void ManageBurning()
@@ -63,7 +64,7 @@ namespace Ship
         }
         public void ManageExtinguishing()
         {
-            foreach(var room in Rooms)
+            foreach (var room in Rooms)
             {
                 if (room.IsBurning)
                 {
