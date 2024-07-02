@@ -35,7 +35,83 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             
-            <Grid Grid.Column="1">
+            <StackPanel Grid.Column="0" Width="325">
+                <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Инф. о части корабля:</TextBlock>
+                <Border Height="330" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
+                    <TextBlock>
+                        
+                    </TextBlock>
+                </Border>
+                <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Инф. о моряке:</TextBlock>
+                <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
+                    <TextBlock>
+
+                    </TextBlock>
+                </Border>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0"  Margin="0 0 5 0">
+                        <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Склад:</TextBlock>
+                        <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
+                            <TextBlock>
+
+                            </TextBlock>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="5 0 0 0">
+                        <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Сокровищница:</TextBlock>
+                        <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
+                            <TextBlock>
+
+                            </TextBlock>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+                <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Состояние судна:</TextBlock>
+                <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
+                    <TextBlock>
+
+                    </TextBlock>
+                </Border>
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="PaleVioletRed" FontWeight="Bold" FontSize="18">Управление моряками:</TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" Grid.Column="0" BorderThickness="3" BorderBrush="PaleVioletRed" Margin="10" Width="122" Height="45">
+                            <Button  Width="123" Height="45" Background="Bisque" Content="Нанять" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                            </Button>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0" BorderThickness="3" BorderBrush="PaleVioletRed" Margin="10" Width="122" Height="45">
+                            <Button  Width="123" Height="45" Background="Bisque" Content="Переобличить" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                            </Button>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1" BorderThickness="3" BorderBrush="PaleVioletRed" Margin="10" Width="122" Height="45">
+                            <Button  Width="123" Height="45" Background="Bisque" Content="Перетереть" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                            </Button>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="1" BorderThickness="3" BorderBrush="PaleVioletRed" Margin="10" Width="122" Height="45">
+                            <Button  Width="123" Height="45" Background="Bisque" Content="Выкинуть за борт" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                            </Button>
+                        </Border>
+
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+                <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -64,9 +140,12 @@
                 <Button Grid.Column="2" Grid.Row="0" Margin="10 37 10 30" Background="Bisque" Content="Воронье Гнездо" FontSize="15"/>
                 <Button Grid.Column="6" Grid.Row="3" Margin="15 37 15 30" Background="Bisque" Content="Камбуз" FontSize="15"/>
                 <Button Grid.Column="3" Grid.Row="5" Margin="5 37 5 30" Background="Bisque" Content="Сокровищница" FontSize="15"/>
+                <Button Grid.Column="3" Grid.Row="5" Margin="5 90 5 5" Background="Bisque" Content="Добавить" FontSize="12"/>
                 <Button Grid.Column="5" Grid.Row="3" Margin="15 37 15 30" Background="Bisque" Content="Склад" FontSize="15"/>
                 <Button Grid.Column="2" Grid.Row="5" Margin="15 37 15 30" Background="Bisque" Content="Сундук" FontSize="15"/>
+                <Button Grid.Column="2" Grid.Row="5" Margin="15 90 15 5" Background="Bisque" Content="Добавить" FontSize="12"/>
                 <Button Grid.Column="3" Grid.Row="4" Margin="15 37 15 30" Background="Bisque" Content="Раб" FontSize="15"/>
+                <Button Grid.Column="1" Grid.Row="1" Margin="110 37 -105 30" Background="Bisque" Content="Управлять Пушками" FontSize="15"/>
             </Grid>
             
         </Grid>

@@ -19,7 +19,12 @@ namespace Ship
         private bool _isHngry;
         private Random _rnd = new Random();
 
-
+        public CrewMember(string name, string sex)
+        {
+            _name = name;
+            _sex = sex;
+            _isHngry = false;
+        }
 
         public ShipPart CurrentRoom { get; set; }
         public string Name

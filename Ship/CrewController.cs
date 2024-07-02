@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows.Documents;
 
 namespace Ship
 {
@@ -8,7 +10,6 @@ namespace Ship
         private ObservableCollection<CrewMember> _crew;
         private Random _rnd = new Random();
         
-
         public ObservableCollection<CrewMember> Crew { get => _crew; }
         public MainModel MainControl { get; set; }
         
@@ -87,6 +88,33 @@ namespace Ship
                 else
                     crewMember.IsBusy = false;
             }
+        }
+
+        public void AddRandomCrewer()
+        {
+            List<string> Names = new List<string>() { "Blackbeard", "Henry Morgan", "William Kidd", "Black Bart", "Black Fart", "Calico", "Drake", "Every", "Bony", "Mary Read", "Grace O'Malley" };
+            var rand = _rnd.Next(Names.Count);//include or exclude
+            string name = Names[rand];
+            string sex;
+            if (name == "Bony" || name == "Mary Read" || name == "Grace O'Malley")
+                _crew.Add(new CrewMember(Names[rand], "female"));
+            else
+                _crew.Add(new CrewMember(Names[rand], "male"));
+        }
+
+        public void RemoveCrewer(CrewMember crewer)
+        {
+            _crew.Remove(crewer);
+        }
+
+        public void StatusCrewer(CrewMember crewer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RedactCrewer(CrewMember crewer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

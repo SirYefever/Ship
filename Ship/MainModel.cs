@@ -28,8 +28,6 @@ namespace Ship
             timer.Start();
 
             RoomControl = new RoomManager();
-            
-
             CrewControl = new CrewController();
             CrewControl.SpreadCrewOverShip();
         }
