@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Ship.ShipParts
 {
     public class Mast : ShipPart
     {
         public CrowsNest crowsNest { get; set; }
+        public bool CrowsNestNeeded { get; set; } = true; //TODO fix
 
         public Mast()
         {
-            crowsNest = new CrowsNest();
+            if (CrowsNestNeeded)
+                crowsNest = new CrowsNest();
         }
     }
 }

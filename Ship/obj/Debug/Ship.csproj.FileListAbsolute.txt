@@ -13,7 +13,10 @@ C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.CoreCompileInputs.cache
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.exe
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.pdb
-C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\Prism.dll
-C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\Prism.pdb
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\Prism.xml
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.Up2Date
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.Fody.CopyLocal.cache
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.Fody.RuntimeCopyLocal.cache

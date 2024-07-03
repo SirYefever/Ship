@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ship
 {
@@ -24,6 +20,36 @@ namespace Ship
             _name = name;
             _sex = sex;
             _isHngry = false;
+        }
+
+        public string Hungriness
+        {
+            get
+            {
+                if (_isHngry)
+                    return "Голодный";
+                else
+                    return "Сытый";
+            }
+        }
+
+        public string Busyness
+        {
+            get
+            {
+                if (IsBusy)
+                    return BusyUntil == int.MaxValue ? "ТУШИТ" : "Хавает";
+                else
+                    return "Свободен";
+            }
+        }
+
+        public string CurrentRoomString
+        {
+            get
+            {
+                return CurrentRoom.GetType().ToString().Substring(CurrentRoom.GetType().ToString().LastIndexOf('.') + 1);
+            }
         }
 
         public ShipPart CurrentRoom { get; set; }
@@ -59,7 +85,8 @@ namespace Ship
 
         public void Move(ShipPart room)
         {
-            CurrentRoom.Crewers.Remove(this);
+            if (!(CurrentRoom == null))
+                CurrentRoom.Crewers.Remove(this);
             room.Crewers.Add(this);
             CurrentRoom = room;
         }

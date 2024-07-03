@@ -10,5 +10,12 @@ namespace Ship.ShipParts
     {
         private int _provisionsQuantity;
         private int _ammoQuantity;
+
+        public Stock(int capacity) : base(capacity)
+        {
+        }
+
+        public int Food { get => _provisionsQuantity; }
+        public int Ammo { get => _ammoQuantity; }
     }
 }

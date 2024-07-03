@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Ship.ShipParts
 {
     public class SlaveRoomClass : BountyRoom
     {
+        public int SlavesQuantity { get; set; }
 
+        public SlaveRoomClass()
+        {
+            SlavesQuantity = 0;
+        }
     }
 }

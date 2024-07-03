@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Ship"
+        xmlns:local="clr-namespace:Ship" xmlns:viewmodels="clr-namespace:Ship"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920" Background="{DynamicResource backgroundImage}">
+    <Window.DataContext>
+        <viewmodels:MainViewModel/>
+    </Window.DataContext>
     <Window.Resources>
 
         <ImageSource x:Key="imgSource">background.png</ImageSource>
@@ -37,16 +40,49 @@
             
             <StackPanel Grid.Column="0" Width="325">
                 <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Инф. о части корабля:</TextBlock>
-                <Border Height="330" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
-                    <TextBlock>
-                        
-                    </TextBlock>
+                <Border Height="330" BorderThickness="4" BorderBrush="PaleVioletRed" >
+                    <ListBox Background="Bisque" x:Name="ShipPartStatus" ItemsSource="{Binding CurrentCrewers}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Margin="0 0 5 0"/>
+                                    <TextBlock Text="{Binding Path=Busyness}" Margin="0 0 5 0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </Border>
                 <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Инф. о моряке:</TextBlock>
                 <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
-                    <TextBlock>
-
-                    </TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0">Имя</TextBlock>
+                            <TextBlock Grid.Row="1">Пол</TextBlock>
+                            <TextBlock Grid.Row="2">Занятость</TextBlock>
+                            <TextBlock Grid.Row="3">Сытость</TextBlock>
+                            <TextBlock Grid.Row="4">Местоположение</TextBlock>
+                        </Grid>
+                        <ListBox Background="Bisque" x:Name="CrewerStatus" ItemsSource="{Binding StatusedCrewer}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Grid.Column="0" Text="{Binding Path=Name}" Margin="0 0 5 0"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Path=Sex}" Margin="0 0 5 0"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding Path=Busyness}" Margin="0 0 5 0"/>
+                                        <TextBlock Grid.Column="3" Text="{Binding Path=Hungriness}" Margin="0 0 5 0"/>
+                                        <TextBlock Grid.Column="4" Text="{Binding Path=CurrentRoomString}" Margin="0 0 5 0"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
                 </Border>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -56,25 +92,82 @@
                     <StackPanel Grid.Column="0"  Margin="0 0 5 0">
                         <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Склад:</TextBlock>
                         <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
-                            <TextBlock>
-
-                            </TextBlock>
+                            <StackPanel Orientation="Horizontal" Margin="35 0 0 0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0">Еда:</TextBlock>
+                                    <TextBlock Grid.Row="1">Боезапас:</TextBlock>
+                                </Grid>
+                                <ListBox Background="Bisque" x:Name="StockStatus" ItemsSource="{Binding StatusedStock}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Height="43" Grid.Column="0" Text="{Binding Path=Food}" Margin="0 0 5 0"/>
+                                                <TextBlock Grid.Column="1" Text="{Binding Path=Ammo}" Margin="0 0 5 0"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
                         </Border>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Margin="5 0 0 0">
                         <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Сокровищница:</TextBlock>
                         <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
-                            <TextBlock>
-
-                            </TextBlock>
+                            <StackPanel Orientation="Horizontal" Margin="45 0 0 0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0">Добыча:</TextBlock>
+                                    <TextBlock Grid.Row="1">Золото:</TextBlock>
+                                    <TextBlock Grid.Row="2">Рабы:</TextBlock>
+                                </Grid>
+                                <ListBox Background="Bisque" x:Name="ChestStatus" ItemsSource="{Binding StatusedTreasureRoom}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Grid.Column="0" Text="{Binding Path=Bounty}" Margin="0 -2 5 0"/>
+                                                <TextBlock Grid.Column="0" Text="{Binding Path=Gold}" Margin="0 14 5 0"/>
+                                                <TextBlock Grid.Column="1" Text="{Binding Path=Slaves}" Margin="0 14 5 0"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
                         </Border>
                     </StackPanel>
                 </Grid>
                 <TextBlock HorizontalAlignment="Center" Foreground="PaleVioletRed" FontSize="18" FontWeight="Bold">Состояние судна:</TextBlock>
                 <Border Height="100" BorderThickness="4" BorderBrush="PaleVioletRed" Background="Bisque">
-                    <TextBlock>
-
-                    </TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="95 0 0 0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0">Команда:</TextBlock>
+                            <TextBlock Grid.Row="1">Пушек:</TextBlock>
+                            <TextBlock Grid.Row="2">Состояние:</TextBlock>
+                        </Grid>
+                        <ListBox Background="Bisque" x:Name="WholeShipStatus" ItemsSource="{Binding WholeShipStatus}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Height="20" Grid.Column="0" Text="{Binding Path=CrewSize}" Margin="0 -5 5 0"/>
+                                        <TextBlock Height="20" Grid.Column="0" Text="{Binding Path=CannonsQuantityString}" Margin="0 12 5 0"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Path=IsBurning}" Margin="0 11 5 0"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
                 </Border>
                 <StackPanel>
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="PaleVioletRed" FontWeight="Bold" FontSize="18">Управление моряками:</TextBlock>
@@ -88,7 +181,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Border Grid.Row="0" Grid.Column="0" BorderThickness="3" BorderBrush="PaleVioletRed" Margin="10" Width="122" Height="45">
-                            <Button  Width="123" Height="45" Background="Bisque" Content="Нанять" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button  Width="123" Height="45" Background="Bisque" Content="Нанять" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding AddRandomCrewerCommand}">
 
                             </Button>
                         </Border>
@@ -98,12 +191,12 @@
                             </Button>
                         </Border>
                         <Border Grid.Row="0" Grid.Column="1" BorderThickness="3" BorderBrush="PaleVioletRed" Margin="10" Width="122" Height="45">
-                            <Button  Width="123" Height="45" Background="Bisque" Content="Перетереть" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Width="123" Height="45" Background="Bisque" Content="Перетереть" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StatusCrewerCommand}" CommandParameter="{Binding ElementName=ShipPartStatus, Path=SelectedItem}">
 
                             </Button>
                         </Border>
                         <Border Grid.Row="1" Grid.Column="1" BorderThickness="3" BorderBrush="PaleVioletRed" Margin="10" Width="122" Height="45">
-                            <Button  Width="123" Height="45" Background="Bisque" Content="Выкинуть за борт" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button  Width="123" Height="45" Background="Bisque" Content="Выкинуть за борт" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding RemoveCrewerCommand}" CommandParameter="{Binding ElementName=ShipPartStatus, Path=SelectedItem}">
 
                             </Button>
                         </Border>
@@ -134,18 +227,18 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="6" Grid.Row="1" Margin="15 37 15 30" Background="Bisque" Content="Палуба" FontSize="15"/>
-                <Button Grid.Column="2" Grid.Row="2" Margin="15 37 15 30" Background="Bisque" Content="Каюта" FontSize="15"/>
-                <Button Grid.Column="4" Grid.Row="0" Margin="15 37 15 30" Background="Bisque" Content="Мачта" FontSize="15"/>
-                <Button Grid.Column="2" Grid.Row="0" Margin="10 37 10 30" Background="Bisque" Content="Воронье Гнездо" FontSize="15"/>
-                <Button Grid.Column="6" Grid.Row="3" Margin="15 37 15 30" Background="Bisque" Content="Камбуз" FontSize="15"/>
-                <Button Grid.Column="3" Grid.Row="5" Margin="5 37 5 30" Background="Bisque" Content="Сокровищница" FontSize="15"/>
-                <Button Grid.Column="3" Grid.Row="5" Margin="5 90 5 5" Background="Bisque" Content="Добавить" FontSize="12"/>
-                <Button Grid.Column="5" Grid.Row="3" Margin="15 37 15 30" Background="Bisque" Content="Склад" FontSize="15"/>
-                <Button Grid.Column="2" Grid.Row="5" Margin="15 37 15 30" Background="Bisque" Content="Сундук" FontSize="15"/>
-                <Button Grid.Column="2" Grid.Row="5" Margin="15 90 15 5" Background="Bisque" Content="Добавить" FontSize="12"/>
-                <Button Grid.Column="3" Grid.Row="4" Margin="15 37 15 30" Background="Bisque" Content="Раб" FontSize="15"/>
-                <Button Grid.Column="1" Grid.Row="1" Margin="110 37 -105 30" Background="Bisque" Content="Управлять Пушками" FontSize="15"/>
+                <Button Grid.Column="6" Grid.Row="1" Margin="15 37 15 30" Background="Bisque" Content="Палуба" FontSize="15" Command="{Binding DeckStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="2" Grid.Row="2" Margin="15 37 15 30" Background="Bisque" Content="Каюта" FontSize="15" Command="{Binding CabinStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="4" Grid.Row="0" Margin="15 37 15 30" Background="Bisque" Content="Мачта" FontSize="15" Command="{Binding MastStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="2" Grid.Row="0" Margin="10 37 10 30" Background="Bisque" Content="Воронье Гнездо" FontSize="15" Command="{Binding CrowsNestStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="6" Grid.Row="3" Margin="15 37 15 30" Background="Bisque" Content="Камбуз" FontSize="15" Command="{Binding GalleyStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="3" Grid.Row="5" Margin="5 37 5 30" Background="Bisque" Content="Сокровищница" FontSize="15" Command="{Binding TreasureRoomStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="3" Grid.Row="5" Margin="5 90 5 5" Background="Bisque" Content="Добавить" FontSize="12" />
+                <Button Grid.Column="5" Grid.Row="3" Margin="15 37 15 30" Background="Bisque" Content="Склад" FontSize="15" Command="{Binding StockStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="2" Grid.Row="5" Margin="15 37 15 30" Background="Bisque" Content="Сундук" FontSize="15" Command="{Binding ChestStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="2" Grid.Row="5" Margin="15 90 15 5" Background="Bisque" Content="Добавить" FontSize="12" />
+                <Button Grid.Column="3" Grid.Row="4" Margin="15 37 15 30" Background="Bisque" Content="Раб" FontSize="15" Command="{Binding SlaveRoomStatus}" CommandParameter="ShipPartStatus"/>
+                <Button Grid.Column="1" Grid.Row="1" Margin="110 37 -105 30" Background="Bisque" Content="Управлять Пушками" FontSize="15" />
             </Grid>
             
         </Grid>

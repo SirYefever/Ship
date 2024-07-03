@@ -1,18 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Windows.Documents;
+using System.ComponentModel;
 
 namespace Ship
 {
-    public class CrewController
+    public class CrewController : INotifyPropertyChanged
     {
         private ObservableCollection<CrewMember> _crew;
         private Random _rnd = new Random();
-        
-        public ObservableCollection<CrewMember> Crew { get => _crew; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        //public ObservableCollection<CrewMember> Crew { get => _crew; }
+        public CrewMember StatusedCrewer { get; set; } = new CrewMember("TEST", "TEST");
         public MainModel MainControl { get; set; }
-        
+
+        public CrewController()
+        {
+            _crew = new ObservableCollection<CrewMember>();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_crew)));
+        }
+
+        public ObservableCollection<CrewMember> GetCrew(ObservableCollection<ShipPart> shipParts)
+        {
+            _crew.Clear();
+            foreach (var shipPart in shipParts)
+            {
+                foreach (var crewer in shipPart.Crewers)
+                    _crew.Add(crewer);
+            }
+            return _crew;
+        }
 
         public void CrewHungersRandomly()
         {
@@ -36,8 +55,11 @@ namespace Ship
                 }
         }
 
-        public void SpreadCrewOverShip()
+        public void GenerateCrew()
         {
+            for (int i = 0; i < 10; i++)
+                AddRandomCrewer();
+
             foreach(var crewMember in _crew)
             {
                 int rand = _rnd.Next(MainControl.RoomControl.RoomsQuantity);
@@ -59,6 +81,9 @@ namespace Ship
 
         public void ManageExtinguishing()
         {
+            if (!MainControl.IsShipBurning)
+                return;
+
             foreach( var crewMember in _crew)
             {
                 while (!crewMember.IsBusy)
@@ -69,21 +94,25 @@ namespace Ship
                         crewMember.Move(MainControl.RoomControl.Rooms[rand]);
 
                         //Get busy until extinguished
+                        crewMember.IsBusy = true;
                         crewMember.BusyUntil = int.MaxValue;
                     }
                 }
                 //Exempt crewMember from extinguishing if job is done
                 if (crewMember.IsBusy && !crewMember.CurrentRoom.IsBurning)
+                {
                     crewMember.BusyUntil = 0;
+                    crewMember.IsBusy = false;
+                }
                 
             }
         }
-
-        public void ManageBusiness()
+        //TODO: Check if busyness gets managed properly
+        public void ManageBusyness(ObservableCollection<ShipPart> shipParts)
         {
-            foreach (var crewMember in Crew)
+            foreach (var crewMember in GetCrew(shipParts))
             {
-                if (crewMember.BusyUntil <= MainControl.TicksTotal)
+                if (crewMember.BusyUntil >= MainControl.TicksTotal)
                     crewMember.IsBusy = true;
                 else
                     crewMember.IsBusy = false;
@@ -92,29 +121,36 @@ namespace Ship
 
         public void AddRandomCrewer()
         {
-            List<string> Names = new List<string>() { "Blackbeard", "Henry Morgan", "William Kidd", "Black Bart", "Black Fart", "Calico", "Drake", "Every", "Bony", "Mary Read", "Grace O'Malley" };
-            var rand = _rnd.Next(Names.Count);//include or exclude
+            List<string> Names = new List<string>() { "Черная Борода", "Морган", "Кидд", "Черный Барт", "Черный Фарт", "Калико", "Дрэйк", "Ивери", "Бони", "Мэрри Ред", "Грейс О'Мэлли" };
+            var rand = _rnd.Next(Names.Count);
             string name = Names[rand];
             string sex;
             if (name == "Bony" || name == "Mary Read" || name == "Grace O'Malley")
-                _crew.Add(new CrewMember(Names[rand], "female"));
+                _crew.Add(new CrewMember(Names[rand], "♀"));
             else
-                _crew.Add(new CrewMember(Names[rand], "male"));
+                _crew.Add(new CrewMember(Names[rand], "♂"));
+
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_crew)));
         }
 
-        public void RemoveCrewer(CrewMember crewer)
+        public void RemoveCrewer(CrewMember crewer, ObservableCollection<ShipPart> shipParts)
         {
-            _crew.Remove(crewer);
-        }
-
-        public void StatusCrewer(CrewMember crewer)
-        {
-            throw new NotImplementedException();
+            foreach (var shipPart in shipParts)
+            {
+                if (shipPart.Crewers.Contains(crewer))
+                {
+                    shipPart.Crewers.Remove(crewer);
+                    
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(shipPart.Crewers)));
+                    break;
+                }
+            }
         }
 
         public void RedactCrewer(CrewMember crewer)
         {
             throw new NotImplementedException();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_crew)));
         }
     }
 }

@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Ship.ShipParts
 {
+
+    
     public class ChestClass : BountyRoom
     {
+        public int Gold { get; set; }
+        public ChestClass()
+        {
+            Gold = 0;
+        }
     }
 }

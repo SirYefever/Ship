@@ -14,12 +14,12 @@ namespace Ship.ShipParts
         public TreasureRoom treasureRoom { get; set; }
         public Stock stock { get; set; }
 
-        public Deck()
+        public Deck(int chestCapacity, int stockCapacity)
         {
             cabin = new Cabin();
             mast = new Mast();
-            treasureRoom = new TreasureRoom();  
-            stock = new Stock();
+            treasureRoom = new TreasureRoom(chestCapacity);  
+            stock = new Stock(stockCapacity);
             galley = new Galley();
         }
     }
