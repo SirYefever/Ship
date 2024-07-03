@@ -9,12 +9,12 @@ namespace Ship.ShipParts
         private int _cannonQuantity;
         private string _condition;
         private bool _isAnyShipPartBurning;
-        public ShipClass(int cannonsQuantity, int chestCapacity, int stockCapacity)
+        public ShipClass(int cannonsQuantity, int chestCapacity, int stockCapacity, bool crowsNestRequired)
         {
             _cannonQuantity = cannonsQuantity;
             _condition = "Intact";
             _isAnyShipPartBurning = false;
-            deck = new Deck(chestCapacity, stockCapacity);  
+            deck = new Deck(chestCapacity, stockCapacity, crowsNestRequired);  
         }
 
         public bool IsAnyShipPartBurning
@@ -27,14 +27,25 @@ namespace Ship.ShipParts
         {
             get
             {
-                return (Crewers.Count +
-                    deck.Crewers.Count +
-                    deck.cabin.Crewers.Count +
-                    deck.mast.Crewers.Count +
-                    deck.mast.crowsNest.Crewers.Count +
-                    deck.galley.Crewers.Count +
-                    deck.treasureRoom.Crewers.Count +
-                    deck.stock.Crewers.Count).ToString() + " Человек";
+                if (deck.mast.crowsNest == null)
+                    return (Crewers.Count +
+                        deck.Crewers.Count +
+                        deck.cabin.Crewers.Count +
+                        deck.mast.Crewers.Count +
+                        deck.galley.Crewers.Count +
+                        deck.treasureRoom.Crewers.Count +
+                        deck.stock.Crewers.Count).ToString() + " Человек";
+                else
+                {
+                    return (Crewers.Count +
+                        deck.Crewers.Count +
+                        deck.cabin.Crewers.Count +
+                        deck.mast.Crewers.Count +
+                        deck.mast.crowsNest.Crewers.Count +
+                        deck.galley.Crewers.Count +
+                        deck.treasureRoom.Crewers.Count +
+                        deck.stock.Crewers.Count).ToString() + " Человек";
+                }
             }
         }
 
@@ -43,6 +54,17 @@ namespace Ship.ShipParts
             get
             {
                 return _cannonQuantity.ToString() + " штук";
+            }
+        }
+
+        public string BurningStringStatus
+        {
+            get
+            {
+                if (IsBurning)
+                    return "Пожар";
+                else
+                    return "Нормуль";
             }
         }
 

@@ -8,7 +8,7 @@ namespace Ship.ShipParts
 {
 
     
-    public class ChestClass : BountyRoom
+    public class ChestClass : BountyContainer
     {
         public int Gold { get; set; }
         public ChestClass()

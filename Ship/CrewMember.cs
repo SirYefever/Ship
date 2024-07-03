@@ -87,7 +87,7 @@ namespace Ship
         {
             if (!(CurrentRoom == null))
                 CurrentRoom.Crewers.Remove(this);
-            room.Crewers.Add(this);
+            room?.Crewers.Add(this);
             CurrentRoom = room;
         }
 

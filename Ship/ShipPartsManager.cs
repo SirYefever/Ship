@@ -31,9 +31,9 @@ namespace Ship
             return null;
         }
 
-        public ShipPartsManager(int cannonsQuantity, int chestCapacity, int stockCapacity)
+        public ShipPartsManager(int cannonsQuantity, int chestCapacity, int stockCapacity, bool crowsNestRequired)
         {
-            Ship = new ShipClass(cannonsQuantity, chestCapacity, stockCapacity);
+            Ship = new ShipClass(cannonsQuantity, chestCapacity, stockCapacity, crowsNestRequired);
             Chest = new ChestClass();
             SlaveRoom = new SlaveRoomClass();
             Ship.deck.treasureRoom.chest = Chest;
@@ -47,13 +47,12 @@ namespace Ship
             _rooms.Add(Ship);
             _rooms.Add(Ship.deck);
             _rooms.Add(Ship.deck.mast);
-            _rooms.Add(Ship.deck.mast.crowsNest);
             _rooms.Add(Ship.deck.cabin);
             _rooms.Add(Ship.deck.galley);
             _rooms.Add(Ship.deck.stock);
             _rooms.Add(Ship.deck.treasureRoom);
-            _rooms.Add(Ship.deck.treasureRoom.chest);
-            _rooms.Add(Ship.deck.treasureRoom.slaveRoom);
+            if (!(Ship.deck.mast.crowsNest == null))
+                _rooms.Add(Ship.deck.mast.crowsNest);
         }
 
         public void ManageBurning()

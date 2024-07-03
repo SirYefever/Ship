@@ -198,11 +198,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Additional Windows\StartWindow.xaml.cs">
+      <DependentUpon>StartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Additional Windows\StartWindowViewModel.cs" />
     <Compile Include="MainViewModel.cs" />
-    <Compile Include="ShipParts\BountyRoom.cs" />
+    <Compile Include="Bounties\BountyContainer.cs" />
     <Compile Include="CrewController.cs" />
     <Compile Include="ShipParts\Cabin.cs" />
-    <Compile Include="ShipParts\ChestClass.cs" />
+    <Compile Include="Bounties\ChestClass.cs" />
     <Compile Include="ShipParts\CrowsNest.cs" />
     <Compile Include="ShipParts\Deck.cs" />
     <Compile Include="ShipParts\Galley.cs" />
@@ -210,11 +214,15 @@
     <Compile Include="ShipParts\ShipClass.cs" />
     <Compile Include="ShipParts\ShipPart.cs" />
     <Compile Include="ShipPartsManager.cs" />
-    <Compile Include="ShipParts\SlaveRoomClass.cs" />
+    <Compile Include="Bounties\SlaveRoomClass.cs" />
     <Compile Include="ShipParts\Stock.cs" />
     <Compile Include="ShipParts\TreasureRoom.cs" />
     <Compile Include="ShipParts\Storage.cs" />
     <Compile Include="StatusController.cs" />
+    <Page Include="Additional Windows\StartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

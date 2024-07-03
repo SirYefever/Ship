@@ -4,11 +4,10 @@ namespace Ship.ShipParts
     public class Mast : ShipPart
     {
         public CrowsNest crowsNest { get; set; }
-        public bool CrowsNestNeeded { get; set; } = true; //TODO fix
 
-        public Mast()
+        public Mast(bool crowsNestRequired)
         {
-            if (CrowsNestNeeded)
+            if (crowsNestRequired)
                 crowsNest = new CrowsNest();
         }
     }

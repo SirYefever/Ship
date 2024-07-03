@@ -20,3 +20,5 @@ C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.Generat
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.Fody.CopyLocal.cache
 C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Ship.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Additional Windows\StartWindow.g.cs
+C:\Users\ninja\OneDrive\Рабочий стол\Ship\Ship\obj\Debug\Additional Windows\StartWindow.baml

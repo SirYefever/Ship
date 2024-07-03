@@ -1,7 +1,9 @@
-﻿using Ship.ShipParts;
+﻿using Ship.Additional_Windows;
+using Ship.ShipParts;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace Ship
@@ -63,6 +65,8 @@ namespace Ship
             }
         }
 
+        public StartWindowViewModel startUpViewModel {  get; set; }
+
         public MainModel()
         {
             //TODO: Remove
@@ -70,13 +74,18 @@ namespace Ship
             _stockCapacity = 10;
             _chestCapacity = 10;
 
+            startUpViewModel = new StartWindowViewModel();
+            StartWindow startWindow = new StartWindow(startUpViewModel);
+            startWindow.Show();
+
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(_secondsInTick);
             timer.Tick += timerTick;
             timer.Start();
 
             StatusManager = new StatusController();
-            RoomControl = new ShipPartsManager(_cannonsQuantity, _chestCapacity, _stockCapacity);
+            //RoomControl = new ShipPartsManager(_cannonsQuantity, _chestCapacity, _stockCapacity);
+            RoomControl = new ShipPartsManager(startUpViewModel.CannonsQuantity, startUpViewModel.TreasureRoomCapacity, startUpViewModel.StockCapacity, startUpViewModel.CrowsNestRequired);
             CrewControl = new CrewController();
             StatusManager.ShipParts = RoomControl.Rooms;
             StatusManager.CurrentStatusedCrewer = new ObservableCollection<CrewMember>();
@@ -87,8 +96,12 @@ namespace Ship
         public void timerTick(object sender, EventArgs e)
         {
 
-            if (_isPaused)
+            if (startUpViewModel.CannonsQuantity == 0)
                 return;
+            else
+            {
+                RoomControl = new ShipPartsManager(startUpViewModel.CannonsQuantity, startUpViewModel.TreasureRoomCapacity, startUpViewModel.StockCapacity, startUpViewModel.CrowsNestRequired);
+            }
 
             TicksTotal++;
 

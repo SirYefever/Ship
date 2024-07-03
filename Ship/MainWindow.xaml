@@ -162,7 +162,7 @@
                                     <StackPanel Orientation="Vertical">
                                         <TextBlock Height="20" Grid.Column="0" Text="{Binding Path=CrewSize}" Margin="0 -5 5 0"/>
                                         <TextBlock Height="20" Grid.Column="0" Text="{Binding Path=CannonsQuantityString}" Margin="0 12 5 0"/>
-                                        <TextBlock Grid.Column="1" Text="{Binding Path=IsBurning}" Margin="0 11 5 0"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Path=BurningStringStatus}" Margin="0 11 5 0"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>

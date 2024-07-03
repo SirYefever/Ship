@@ -1,0 +1,33 @@
+﻿<Window x:Class="Ship.Additional_Windows.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ship.Additional_Windows"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="180" Width="300" Background="Bisque">
+    <StackPanel>
+        <TextBlock Margin="0 10 0 10" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="Black" TextDecorations="Underline" FontWeight="Bold">Укажите Начальные параметры:</TextBlock>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                <TextBlock Text="Кол-во орудий:"/>
+                <TextBox x:Name="Cannons" PreviewTextInput="PreviewTextInput"  Width="40" Text="{Binding CannonsQuantity, Mode=TwoWay}" Margin="5 1 5 5"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Grid.Column="0" Margin="10 0 0 0">
+                    <TextBlock Text="Воронье Гнездо:"/>
+                </StackPanel>
+                <CheckBox x:Name="CNCheckBox" Margin="5 2 5 5" ></CheckBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+            <TextBlock Text="Вместимость Склада:"/>
+            <TextBox Width="40" x:Name="StockCapacity" Text="{Binding StorageCapacity, Mode=TwoWay}" PreviewTextInput="PreviewTextInput"  Margin="5 1 5 5"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+            <TextBlock Text="Вместимость Сокровищницы:"/>
+            <TextBox Width="40" x:Name="TreasureRoomCapacity" Text="{Binding TreasureRoomCapacity, Mode=TwoWay}" PreviewTextInput="PreviewTextInput"  Margin="5 1 5 5"/>
+        </StackPanel>
+        <Button Click="ClickLesGo" Content="OKAAAY LES GO" HorizontalAlignment="Center" />
+    </StackPanel>
+</Window>
