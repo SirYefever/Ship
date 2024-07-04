@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace Ship
 {
-    public class ShipPartsManager : INotifyPropertyChanged
+    public class ShipPartControlModel : INotifyPropertyChanged
     {
         private ObservableCollection<ShipPart> _rooms;
         private Random _rnd = new Random();
@@ -31,7 +31,7 @@ namespace Ship
             return null;
         }
 
-        public ShipPartsManager(int cannonsQuantity, int chestCapacity, int stockCapacity, bool crowsNestRequired)
+        public ShipPartControlModel(int cannonsQuantity, int chestCapacity, int stockCapacity, bool crowsNestRequired)
         {
             Ship = new ShipClass(cannonsQuantity, chestCapacity, stockCapacity, crowsNestRequired);
             Chest = new ChestClass();

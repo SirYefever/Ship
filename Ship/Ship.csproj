@@ -198,13 +198,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Additional Windows\StartWindow.xaml.cs">
-      <DependentUpon>StartWindow.xaml</DependentUpon>
+    <Compile Include="CrewerRedactWindow.xaml.cs">
+      <DependentUpon>CrewerRedactWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Additional Windows\StartWindowViewModel.cs" />
-    <Compile Include="MainViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Bounties\BountyContainer.cs" />
-    <Compile Include="CrewController.cs" />
+    <Compile Include="Models\CrewControlModel.cs" />
     <Compile Include="ShipParts\Cabin.cs" />
     <Compile Include="Bounties\ChestClass.cs" />
     <Compile Include="ShipParts\CrowsNest.cs" />
@@ -213,13 +212,13 @@
     <Compile Include="ShipParts\Mast.cs" />
     <Compile Include="ShipParts\ShipClass.cs" />
     <Compile Include="ShipParts\ShipPart.cs" />
-    <Compile Include="ShipPartsManager.cs" />
+    <Compile Include="Models\ShipPartControlModel.cs" />
     <Compile Include="Bounties\SlaveRoomClass.cs" />
     <Compile Include="ShipParts\Stock.cs" />
     <Compile Include="ShipParts\TreasureRoom.cs" />
     <Compile Include="ShipParts\Storage.cs" />
-    <Compile Include="StatusController.cs" />
-    <Page Include="Additional Windows\StartWindow.xaml">
+    <Compile Include="Models\StatusControlModel.cs" />
+    <Page Include="CrewerRedactWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -231,8 +230,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CrewMember.cs" />
-    <Compile Include="MainModel.cs" />
+    <Compile Include="Crewer\CrewMember.cs" />
+    <Compile Include="Models\MainModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

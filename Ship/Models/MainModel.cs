@@ -1,5 +1,4 @@
-﻿using Ship.Additional_Windows;
-using Ship.ShipParts;
+﻿using Ship.ShipParts;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -10,21 +9,22 @@ namespace Ship
 {
     public class MainModel : INotifyPropertyChanged
     {
-        private StatusController _statusManager;
-        private ShipPartsManager _roomControl;
-        private CrewController _crewControl;
+        private StatusControlModel _statusManager;
+        private ShipPartControlModel _roomControl;
+        private CrewControlModel _crewControl;
         private int _cannonsQuantity;
         private int _chestCapacity;
         private int _stockCapacity;
+        private bool _crowsNestRequired;
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) =>
         {
 
         };
 
         private bool _isPaused = false;
-        private const int _secondsInTick = 1;
+        private const int _secondsInTick = 2;
 
-        public StatusController StatusManager
+        public StatusControlModel StatusManager
         {
             get => _statusManager;
             set
@@ -33,7 +33,7 @@ namespace Ship
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_statusManager)));
             }
         }
-        public ShipPartsManager RoomControl
+        public ShipPartControlModel RoomControl
         {
             get => _roomControl;
             set
@@ -42,7 +42,7 @@ namespace Ship
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_roomControl)));
             }
         }
-        public CrewController CrewControl
+        public CrewControlModel CrewControl
         {
             get => _crewControl;
             set
@@ -65,28 +65,22 @@ namespace Ship
             }
         }
 
-        public StartWindowViewModel startUpViewModel {  get; set; }
-
         public MainModel()
         {
             //TODO: Remove
             _cannonsQuantity = 10;
             _stockCapacity = 10;
             _chestCapacity = 10;
-
-            startUpViewModel = new StartWindowViewModel();
-            StartWindow startWindow = new StartWindow(startUpViewModel);
-            startWindow.Show();
+            _crowsNestRequired = true;
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(_secondsInTick);
             timer.Tick += timerTick;
             timer.Start();
 
-            StatusManager = new StatusController();
-            //RoomControl = new ShipPartsManager(_cannonsQuantity, _chestCapacity, _stockCapacity);
-            RoomControl = new ShipPartsManager(startUpViewModel.CannonsQuantity, startUpViewModel.TreasureRoomCapacity, startUpViewModel.StockCapacity, startUpViewModel.CrowsNestRequired);
-            CrewControl = new CrewController();
+            StatusManager = new StatusControlModel();
+            RoomControl = new ShipPartControlModel(_cannonsQuantity, _chestCapacity, _stockCapacity, _crowsNestRequired);
+            CrewControl = new CrewControlModel();
             StatusManager.ShipParts = RoomControl.Rooms;
             StatusManager.CurrentStatusedCrewer = new ObservableCollection<CrewMember>();
             CrewControl.MainControl = this;
@@ -95,14 +89,6 @@ namespace Ship
 
         public void timerTick(object sender, EventArgs e)
         {
-
-            if (startUpViewModel.CannonsQuantity == 0)
-                return;
-            else
-            {
-                RoomControl = new ShipPartsManager(startUpViewModel.CannonsQuantity, startUpViewModel.TreasureRoomCapacity, startUpViewModel.StockCapacity, startUpViewModel.CrowsNestRequired);
-            }
-
             TicksTotal++;
 
             if (TicksTotal % 5 == 0)

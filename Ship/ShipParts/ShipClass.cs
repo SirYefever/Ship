@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace Ship.ShipParts
 {
@@ -66,6 +67,17 @@ namespace Ship.ShipParts
                 else
                     return "Нормуль";
             }
+        }
+
+        public void IncreaseCannonsQuantity()
+        {
+            _cannonQuantity++;
+            
+        }
+
+        public void DecreaseCannonsQuantity()
+        {
+            _cannonQuantity--;
         }
 
         public void Sail()

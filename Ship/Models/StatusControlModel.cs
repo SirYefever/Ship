@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace Ship
 {
-    public class StatusController : INotifyPropertyChanged
+    public class StatusControlModel : INotifyPropertyChanged
     {
         private ObservableCollection<TreasureRoom> _statusedTreasureRoom;
         private ObservableCollection<Stock> _currentStatusedStock;
@@ -16,7 +16,7 @@ namespace Ship
 
         };
 
-        public StatusController()
+        public StatusControlModel()
         {
             _currentShipPartCrewers = new ObservableCollection<CrewMember>();
             _currentStatusedStock = new ObservableCollection<Stock>();

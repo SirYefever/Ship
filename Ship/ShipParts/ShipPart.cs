@@ -8,6 +8,7 @@ namespace Ship
         private ObservableCollection<CrewMember> _crewers;
         private bool _isBurning;
 
+        
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) =>
         {
 

@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace Ship
 {
-    public class CrewController : INotifyPropertyChanged
+    public class CrewControlModel : INotifyPropertyChanged
     {
         private ObservableCollection<CrewMember> _crew;
         private Random _rnd = new Random();
@@ -16,7 +16,7 @@ namespace Ship
         public CrewMember StatusedCrewer { get; set; } = new CrewMember("TEST", "TEST");
         public MainModel MainControl { get; set; }
 
-        public CrewController()
+        public CrewControlModel()
         {
             _crew = new ObservableCollection<CrewMember>();
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_crew)));
@@ -51,6 +51,7 @@ namespace Ship
                 if (crewMember.IsHungry && !crewMember.IsBusy)
                 {
                     crewMember.Move(MainControl.RoomControl.GetRoom("Galley"));
+                    crewMember.IsHungry = false;
                     crewMember.BusyUntil = MainControl.TicksTotal + 1;
                 }
         }
@@ -149,8 +150,9 @@ namespace Ship
 
         public void RedactCrewer(CrewMember crewer)
         {
-            throw new NotImplementedException();
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_crew)));
+            CrewerRedactWindow crewerRedactWindow = new CrewerRedactWindow(crewer);
+            crewerRedactWindow.Show();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(crewer)));
         }
     }
 }

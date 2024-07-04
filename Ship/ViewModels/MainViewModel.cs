@@ -31,7 +31,6 @@ namespace Ship
             RemoveCrewerCommand = new DelegateCommand<CrewMember>(crewer =>
             {
                 _model.CrewControl.RemoveCrewer(crewer, _model.RoomControl.Rooms);
-                //_model.StatusManager.OnPropertyChanged();
                 CurrentCrewers.Remove(crewer);
             });
             StatusCrewerCommand = new DelegateCommand<CrewMember>(crewer =>
@@ -41,6 +40,35 @@ namespace Ship
             RedactCrewerCommand = new DelegateCommand<CrewMember>(crewer =>
             {
                 _model.CrewControl.RedactCrewer(crewer);
+            });
+
+            IncreaseCannonsQuantity = new DelegateCommand(() =>
+            {
+                _model.RoomControl.Ship.IncreaseCannonsQuantity();
+            });
+            DecreaseCannonsQuantity = new DelegateCommand(() =>
+            {
+                _model.RoomControl.Ship.DecreaseCannonsQuantity();
+            });
+
+            IncreaseSlavesQuantity = new DelegateCommand(() =>
+            {
+                _model.RoomControl.Ship.deck.treasureRoom.IncreaseSlavesQuantity();
+            });
+
+            IncreaseGoldQuantity = new DelegateCommand(() =>
+            {
+                _model.RoomControl.Ship.deck.treasureRoom.IncreaseGoldQuantity();
+            });
+
+            IncreaseAmmoQuantity = new DelegateCommand(() =>
+            {
+                _model.RoomControl.Ship.deck.stock.IncreaseAmmoQuantity();
+            });
+
+            IncreaseFoodQuantity = new DelegateCommand(() =>
+            {
+                _model.RoomControl.Ship.deck.stock.IncreaseFoodQuantity();
             });
 
             GalleyStatus = new DelegateCommand(() =>
@@ -100,12 +128,20 @@ namespace Ship
         public DelegateCommand TreasureRoomStatus { get; }
         public DelegateCommand StockStatus { get; }
         public DelegateCommand SlaveRoomStatus { get; }
+        public DelegateCommand IncreaseCannonsQuantity {  get; }
+        public DelegateCommand DecreaseCannonsQuantity { get; }
+        public DelegateCommand IncreaseSlavesQuantity { get; }
+        public DelegateCommand IncreaseGoldQuantity { get; }
+        public DelegateCommand IncreaseAmmoQuantity { get; }
+        public DelegateCommand IncreaseFoodQuantity { get; }
+
 
         public ObservableCollection<TreasureRoom> StatusedTreasureRoom => _model.StatusManager.StatusedTreasureRoom;
         public ObservableCollection<ShipClass> WholeShipStatus => _model.StatusManager.WholeShipStatus;
         public ObservableCollection<CrewMember> CurrentCrewers => _model.StatusManager.CurrentShipPartCrewers;
         public ObservableCollection<CrewMember> StatusedCrewer => _model.StatusManager.CurrentStatusedCrewer;
         public ObservableCollection<Stock> StatusedStock => _model.StatusManager.CurrentStatusedStock;
+
     }
 
     //This comment is supposed to represent my attitude towards me NOT thinking that the fact that I didn't manage to handle new
