@@ -3,5 +3,4 @@
 
 ## Запуск приложения:
 Используя .NET 4.7.2:
-`dotnet build`
 `dotnet run`
